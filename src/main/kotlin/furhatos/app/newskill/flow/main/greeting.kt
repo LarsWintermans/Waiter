@@ -8,18 +8,13 @@ import furhatos.flow.kotlin.state
 import furhatos.nlu.common.No
 import furhatos.nlu.common.Yes
 
-val Greeting: State = state(Parent) {
+val Greeting = state(Parent) {
     onEntry {
-        furhat.ask("Are you hungry?")
-    }
+        random(
+                {   furhat.say("Hi there") },
+                {   furhat.say("Oh, hello there") }
+        )
 
-    onResponse<Yes> {
-        furhat.say("Let me feed you")
+        goto(TakingOrder)
     }
-
-    onResponse<No> {
-        furhat.say("Well maybe you should still eat something")
-    }
-
 }
-
