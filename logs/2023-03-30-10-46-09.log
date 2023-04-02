@@ -1,0 +1,13 @@
+10:46:10 [Skill] INFO  Skill:137 - Connecting to Furhat server on 130.89.182.8:1932
+10:46:12 [Skill] ERROR EventSystem:183 - Timed out while waiting for class furhatos.event.responses.ResponseWebServerPort
+10:46:12 [Skill] ERROR Skill:222 - java.util.concurrent.TimeoutException
+10:46:12 [Skill] WARN  Skill:223 - Unable to get real furhatWebPort, using default of 80
+10:46:12 [NewskillSkill] INFO  NewskillSkill:164 - Starting skill
+10:46:26 [EventSystem] ERROR EventSystem:183 - Timed out while waiting for class furhatos.event.responses.ResponseFaceEngine
+10:46:26 [EventSystem] WARN  FurhatFace:255 - Exception while waiting for FaceEngine
+10:46:27 [EventSystem] ERROR EventSystem:183 - Timed out while waiting for class furhatos.event.responses.ResponseFaceEngine
+10:46:27 [EventSystem] WARN  FurhatFace:255 - Exception while waiting for FaceEngine
+10:46:28 [EventSystem] ERROR EventSystem:183 - Timed out while waiting for class furhatos.event.responses.ResponseFaceEngine
+10:46:28 [EventSystem] WARN  FurhatFace:255 - Exception while waiting for FaceEngine
+10:46:29 [EventSystem] ERROR EventSystem:183 - Timed out while waiting for class furhatos.event.responses.ResponseFaceEngine
+10:46:29 [EventSystem] WARN  FurhatFace:255 - Exception while waiting for FaceEngine
