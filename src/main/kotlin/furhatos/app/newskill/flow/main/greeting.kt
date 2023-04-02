@@ -11,10 +11,20 @@ import furhatos.nlu.common.Yes
 val Greeting = state(Parent) {
     onEntry {
         random(
-                {   furhat.say("Hi there") },
-                {   furhat.say("Oh, hello there") }
-        )
+                {   furhat.ask("Hello") },
+                {   furhat.ask("Oh, hello there") },
+                {   furhat.ask("Good evening")}
+        )}
+        onResponse<Yes>{
+            furhat.say("Welcome to Peter's inn, can I take your order?")
+            goto(TakingOrder)
+        }
+        //need to change that to actual triggers
+        onResponse<No>{
+            furhat.say("Good to see you, welcome to Peter's inn! How are you doing today?")
+            goto(TakingOrder)
+        }
 
-        goto(TakingOrder)
+
     }
-}
+
