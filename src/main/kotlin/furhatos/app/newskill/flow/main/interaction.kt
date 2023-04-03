@@ -20,16 +20,19 @@ val TakingOrder = state {
                 { furhat.ask("Can I get you anything?") }
         )
     }
-
+    //friendly
     onResponse<Yes> {
         random(
-                { furhat.ask("What will it be for you to day?") },
-                { furhat.ask("What would you like?") }
+                { furhat.ask("Should I help you choose a drink, or should I just list our most popular options") },
+                { furhat.ask("So what flavors do you usually like?") }
         )
     }
-
+    //unfriendly
     onResponse<No> {
-        furhat.say("Okay, that's a shame. Have a splendid day!")
+        furhat.say("You can look at the menu to see what we have")
+        furhat.say ( "We obviously have beverages, maybe you can look into the menu to see what we have")
+        furhat.say ("I think anything you order is good")
+        furhat.say ("I think everythung is good. But please make it quick, there are a lot of customers which I need to handle")
         goto(Idle)
     }
 

@@ -22,8 +22,11 @@ val Init: State = state {
                 furhat.attend(users.random)
                 goto(Greeting)
             }
+            users.count == 0 && furhat.isVirtual() -> furhat.say("I can't see anyone. Add a virtual user please.")
+
             else -> goto(Idle)
         }
     }
 
 }
+
